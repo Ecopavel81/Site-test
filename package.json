@@ -1,0 +1,71 @@
+{
+  "name": "weather-forecast-app",
+  "version": "1.0.0",
+  "description": "Weather forecast web application using Open-Meteo API",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src/index.js",
+    "dev": "NODE_ENV=development nodemon src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix",
+    "build": "echo 'Build completed'",
+    "docker:build": "docker build -t weather-app .",
+    "docker:run": "docker run -p 3000:3000 weather-app"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "nodejs",
+    "express",
+    "open-meteo",
+    "docker"
+  ],
+  "author": "Weather App Developer",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "axios": "^1.5.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.8.1",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3",
+    "eslint": "^8.45.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/weather-forecast-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/weather-forecast-app/issues"
+  },
+  "homepage": "https://github.com/your-username/weather-forecast-app#readme"
+}

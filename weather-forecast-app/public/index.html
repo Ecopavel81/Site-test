@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤️</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌤️ Прогноз погоды</h1>
+            <p class="subtitle">Узнайте погоду в любом городе мира</p>
+        </header>
+        
+        <div class="search-section">
+            <div class="recent-cities" id="recentCities" style="display: none;">
+                <h3>Недавние города:</h3>
+                <div class="recent-city-tags" id="recentCityTags"></div>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="cityInput" placeholder="Введите название города..." autocomplete="off">
+                <div class="suggestions" id="suggestions"></div>
+            </div>
+            
+            <button class="search-button" id="searchButton" onclick="searchWeather()">
+                <span id="searchButtonText">Получить прогноз</span>
+                <div class="spinner" id="spinner" style="display: none;"></div>
+            </button>
+        </div>
+
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div id="weatherResult" class="weather-result"></div>
+
+        <div id="searchHistory" class="search-history" style="display: none;">
+            <h3>Популярные города</h3>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Данные предоставлены <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
