@@ -47,7 +47,7 @@ POST /api/search-history - сохранение истории поиска
 🚀 Запуск проекта
 Через Docker (рекомендуется)
 bash# Клонировать репозиторий
-git clone https://github.com/your-username/weather-forecast-app.git
+git clone https://github.com/Ecopavel81//Site-test.git
 cd weather-forecast-app
 
 # Запустить через Docker Compose
@@ -152,3 +152,4 @@ MIT License - см. файл LICENSE
 
 Приложение готово к использованию! 🎉
 Просто выполните docker-compose up --build и откройте http://localhost:3000# Site-test
+# Site-test
